@@ -8,6 +8,7 @@ import { FrontComponent } from './front/front.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
+import { LogoutComponent } from './logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { LoginComponent } from './login/login.component';
     FrontComponent,
     TopBarComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
