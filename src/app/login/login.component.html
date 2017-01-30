@@ -1,9 +1,7 @@
 <form>
   username:<br>
-  <input type="text" name="username_login"/><br>
+  <input type="text" [(ngModel)]="username_login" name="username_login"/><br>
   password:<br>
-  <input type="password" name="password_login"/><br>
-  email:<br>
-  <input type="email" name="email_login"/><br>
-  <input type="button" name="login"/>
+  <input type="password" [(ngModel)]="password_login" name="password_login"/><br>
+  <input type="button" value="login" name="login" (click)=login()/>
 </form>

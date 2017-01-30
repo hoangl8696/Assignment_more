@@ -1,9 +1,9 @@
 <form>
   username:<br>
-  <input type="text" name="username_register"/><br>
+  <input type="text" [(ngModel)]="username_register" name="username_register"/><br>
   password:<br>
-  <input type="password" name="password_register"/><br>
+  <input type="password" [(ngModel)]="password_register" name="password_register"/><br>
   email:<br>
-  <input type="email" name="email_register"/><br>
-  <input type="button" name="register"/>
+  <input type="email" [(ngModel)]="email_register" name="email_register"/><br>
+  <input type="button" value="register" (click)=register() name="register()"/>
 </form>
