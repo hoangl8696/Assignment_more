@@ -11,6 +11,7 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
+import { ThumpnailPipe } from './pipes/thumpnail.pipe';
 
 const routeConfig = [
   {
@@ -43,7 +44,8 @@ const routeConfig = [
     TopBarComponent,
     RegisterComponent,
     LoginComponent,
-    LogoutComponent
+    LogoutComponent,
+    ThumpnailPipe
   ],
   imports: [
     BrowserModule,

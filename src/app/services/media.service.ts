@@ -44,4 +44,12 @@ export class MediaService {
     , (err) => console.log(err.json()) );
   }
 
+  getNew = () => {
+    return this.http.get(this.baseUrl+'media?limit=10/');
+  }
+
+  getFile = (id: any) => {
+    return this.http.get(this.baseUrl+'media/'+id);
+  }
+
 }
