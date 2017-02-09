@@ -1,0 +1,13 @@
+
+<div *ngFor="let file of medias" >
+  <img *ngIf="type==='image'" [alt]="file | thumbnail: 'small'" [src]="'http://media.mw.metropolia.fi/wbma/uploads/' + (file | thumbnail: 'small')">
+  <video *ngIf="type==='video' "width="400" controls [src]="'http://media.mw.metropolia.fi/wbma/uploads/' + (file)"></video>
+  <audio *ngIf="type==='audio'" controls [src]="'http://media.mw.metropolia.fi/wbma/uploads/' + (file)"></audio>
+</div>
+<div>
+  <p>title: {{ title }} </p>
+  <p>description: {{ description }}</p>
+  <p>users: {{ userName }} </p>
+  <p>likes: {{ likes }}</p>
+  <button (click)="like()">Like?</button>
+</div>

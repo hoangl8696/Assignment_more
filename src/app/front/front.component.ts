@@ -9,7 +9,6 @@ import { Component, OnInit } from '@angular/core';
 export class FrontComponent implements OnInit {
   private mediaList;
   private list: any[] = [];
-  private nameList: any[] = [];
 
   constructor(private mediaService: MediaService) { }
 
@@ -17,18 +16,12 @@ export class FrontComponent implements OnInit {
     this.mediaService.getNew().subscribe(res => {
       this.mediaList = res.json();
       for (let res of this.mediaList) {
-        this.list.push(res.file_id);
-        this.mediaService.getFile(res.file_id).subscribe(res=>{
-          this.nameList.push(res.json().filename);
-          console.log(res.json());
-
-        });
+        this.list.push(res);
       }
 
     })
 
     console.log(this.list);
-    console.log(this.nameList);
   }
 
 }

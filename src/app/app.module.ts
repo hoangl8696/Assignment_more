@@ -12,6 +12,7 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 import { ThumpnailPipe } from './pipes/thumpnail.pipe';
+import { PlayerComponent } from './player/player.component';
 
 const routeConfig = [
   {
@@ -34,6 +35,10 @@ const routeConfig = [
   {
     path: 'front',
     component: FrontComponent
+  },
+  {
+    path: 'player/:fileId',
+    component: PlayerComponent
   }
 ];
 
@@ -45,7 +50,8 @@ const routeConfig = [
     RegisterComponent,
     LoginComponent,
     LogoutComponent,
-    ThumpnailPipe
+    ThumpnailPipe,
+    PlayerComponent
   ],
   imports: [
     BrowserModule,

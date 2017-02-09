@@ -1,4 +1,5 @@
 <div>Display this content when logged in.</div>
-<div *ngFor="let file of nameList">
-  <img [alt]="file | thumbnail: 'small'" [src]="'http://media.mw.metropolia.fi/wbma/uploads/' + (file | thumbnail: 'small')">
+<div *ngFor="let file of list">
+  <img [alt]="file.filename | thumbnail: 'small'" [src]="'http://media.mw.metropolia.fi/wbma/uploads/' + (file.filename | thumbnail: 'small')">
+  <a [routerLink] = "['/player',file.file_id]">Go!</a>
 </div>
